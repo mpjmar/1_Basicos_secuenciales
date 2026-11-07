@@ -10,15 +10,16 @@ namespace _1_Basicos_secuenciales
     {
         static void ejercicio1()
         {
-            Console.Write("Introduce un número entero: ");
-            int num1 = int.Parse(Console.ReadLine());
-            Console.Write("Introduce otro número entero: ");
-            int num2 = int.Parse(Console.ReadLine());
+            int num1 = ParseInt("Introduce un número entero: ");
+            int num2 = ParseInt("Introduce otro número entero: ");
 
             Console.WriteLine("La suma es: " + (num1 + num2));
             Console.WriteLine("La resta es: " + (num1 - num2));
             Console.WriteLine("La multiplicación es: " + (num1 * num2));
             Console.WriteLine("La división es: " + (num1 / num2));
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
             Console.WriteLine();
         }
 
@@ -28,20 +29,20 @@ namespace _1_Basicos_secuenciales
             float papas = 1.50f;
             float bebidas = 2.00f;
 
-            Console.Write("Cantidad de hamburguesas: ");
-            int numHamb = int.Parse(Console.ReadLine());
-            Console.Write("Cantidad de papas: ");
-            int numPapas = int.Parse(Console.ReadLine());
-            Console.Write("Cantidad de bebidas: ");
-            int numBeb = int.Parse(Console.ReadLine());
+            int numHamb = ParseInt("Cantidad de hamburguesas: ");
+            int numPapas = ParseInt("Cantidad de papas: ");
+            int numBeb = ParseInt("Cantidad de bebidas: ");
             float total = hamburguesa * numHamb + papas * numPapas + bebidas * numBeb;
-            Console.Write("Cantidad a pagar: " + total);
+            Console.WriteLine($"Cantidad a pagar: {total} euros");
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio3()
         {
-            Console.Write("Introduce un número entero: ");
-            int num1 = int.Parse(Console.ReadLine());
+            int num1 = ParseInt("Introduce un número entero: ");
  
             Console.WriteLine("Valor absoluto: " + Math.Abs(num1));
             Console.WriteLine("Potencia al cubo: " + Math.Pow(num1, 3));
@@ -50,94 +51,99 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine("Coseno: " + Math.Cos(num1));
             Console.WriteLine();
 
-            Console.Write("Ahora introduce otro número: ");
-            int num2 = int.Parse(Console.ReadLine());
+            int num2 = ParseInt("Ahora introduce otro número: ");
             Console.WriteLine("El número máximo es: " + Math.Max(num1, num2));
-            Console.Write("El número mínimo es: " + Math.Min(num1, num2));
+            Console.WriteLine("El número mínimo es: " + Math.Min(num1, num2));
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio4()
         {
             Console.WriteLine("Cálculo del perímetro de un cuadrado.");
-            Console.Write("Introduce la longitud de un lado: ");
-            float lado = float.Parse(Console.ReadLine());
+            float lado = ParseFloat("Introduce la longitud de un lado: ");
             Console.WriteLine("El perímetro del cuadrado es: " + (lado * 4));
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio5()
         {
             Console.WriteLine("Este programa suma los dos primeros números enteros y multiplica los 2 siguientes.");
 
-            Console.Write("Introduce el primero: ");
-            int num1 = int.Parse(Console.ReadLine());
-            Console.Write("Introduce el segundo: ");
-            int num2 = int.Parse(Console.ReadLine());
+            int num1 = ParseInt("Introduce el primero: ");
+            int num2 = ParseInt("Introduce el segundo: ");
             Console.WriteLine($"La suma de {num1} y {num2} es: {num1 + num2}");
             Console.WriteLine();
 
             Console.WriteLine("Vamos ahora con la multiplicación");
-            Console.Write("Introduce ahora el tercer número: ");
-            int num3 = int.Parse(Console.ReadLine());
-            Console.Write("Introduce el último número: ");
-            int num4 = int.Parse(Console.ReadLine());
+            int num3 = ParseInt("Introduce ahora el tercer número: ");
+            int num4 = ParseInt("Introduce el último número: ");
             Console.WriteLine($"La multiplicación de {num3} y {num4} es: {num3 * num4}");
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio6()
         {
             Console.WriteLine("Este programa suma 4 números enteros y calcula su promedio.");
-            Console.Write("Introduce el primer número: ");
-            int num1 = int.Parse(Console.ReadLine());
-            Console.Write("Introduce el segundo número: ");
-            int num2 = int.Parse(Console.ReadLine());
-            Console.Write("Introduce el tercer número: ");
-            int num3 = int.Parse(Console.ReadLine());
-            Console.Write("Introduce el cuarto número: ");
-            int num4 = int.Parse(Console.ReadLine());
+            int num1 = ParseInt("Introduce el primer número: ");
+            int num2 = ParseInt("Introduce el segundo número: ");
+            int num3 = ParseInt("Introduce el tercer número: ");
+            int num4 = ParseInt("Introduce el cuarto número: ");
 
             int total = num1 + num2 + num3 + num4;
             Console.WriteLine("La suma total es: " + total);
 
             float promedio = (float)total / 4;
             Console.WriteLine("Su promedio es: " + promedio);
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio7()
         {
-            Console.Write("Introduce el precio del artículo: ");
-            float precio = float.Parse(Console.ReadLine());
-            Console.Write("Introduce el número de unidades: ");
-            int unid = int.Parse(Console.ReadLine());
+            float precio = ParseFloat("Introduce el precio del artículo: ");
+            int unid = ParseInt("Introduce el número de unidades: ");
 
             Console.WriteLine("El precio total es: " + (precio * unid));
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio8()
         {
             Console.WriteLine("Cálculo de la nota final de Desarrollo de Interfaces");
-            Console.Write("Introduce la primera calificación parcial: ");
-            float parcial1 = float.Parse(Console.ReadLine());
-            Console.Write("Introduce la segunda calificación parcial: ");
-            float parcial2 = float.Parse(Console.ReadLine());
-            Console.Write("Introduce la nota del examen: ");
-            float examen = float.Parse(Console.ReadLine());
-            Console.Write("Introduce la nota del trabajo final: ");
-            float trabajo = float.Parse(Console.ReadLine());
+            float parcial1 = ParseFloat("Introduce la primera calificación parcial: ");
+            float parcial2 = ParseFloat("Introduce la segunda calificación parcial: ");
+            float examen = ParseFloat("Introduce la nota del examen: ");
+            float trabajo = ParseFloat("Introduce la nota del trabajo final: ");
 
             float parciales = (parcial1 + parcial2) / 2;
 
             Console.WriteLine("Nota final: " + ((parciales * 50) + (examen * 30) + (trabajo * 20)) / 100);
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static void ejercicio9()
         {
             Console.WriteLine("Cálculo del porcentaje de participación de los socios.");
-            Console.Write("Introduce la cantidad que aporta el socio 1: ");
-            float socio1 = float.Parse(Console.ReadLine());
-            Console.Write("Introduce la cantidad que aporta el socio 2: ");
-            float socio2 = float.Parse(Console.ReadLine());
-            Console.Write("Introduce la cantidad que aporta el socio 3: ");
-            float socio3 = float.Parse(Console.ReadLine());
+            float socio1 = ParseFloat("Introduce la cantidad que aporta el socio 1: ");
+            float socio2 = ParseFloat("Introduce la cantidad que aporta el socio 2: ");
+            float socio3 = ParseFloat("Introduce la cantidad que aporta el socio 3: ");
 
             float total = socio1 + socio2 + socio3;
             float porcentaje1 = (socio1 / total) * 100;
@@ -147,6 +153,10 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine($"El porcentaje del socio 1 es: {porcentaje1}%");
             Console.WriteLine($"El porcentaje del socio 2 es: {porcentaje2}%");
             Console.WriteLine($"El porcentaje del socio 3 es: {porcentaje3}%");
+            
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
         }
 
         static bool ejercicio10()
@@ -155,20 +165,60 @@ namespace _1_Basicos_secuenciales
             string entrada = Console.ReadLine();
 
             return entrada.StartsWith("www");
+
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine();
+        }
+
+        static int ParseInt(string message)
+        {
+            int number;
+            bool isValid;
+
+            do
+            {
+                Console.Write(message);
+                string input = Console.ReadLine();
+                isValid = int.TryParse(input, out number);
+
+                if (!isValid)
+                    Console.Write("Entrada no válida. Por favor, introduce un número válido: ");
+            } while (!isValid) ;
+
+            return number;
+        }
+
+        static float ParseFloat(string message)
+        {
+            float number;
+            bool isValid;
+
+            do
+            {
+                Console.Write(message);
+                string input = Console.ReadLine();
+                isValid = float.TryParse(input, out number);
+
+                if (!isValid)
+                    Console.Write("Entrada no válida. Por favor, introduce un número válido: ");
+            } while (!isValid);
+
+            return number;
         }
 
         static void Main(string[] args)
         {
-            // ejercicio1();
-            // ejercicio2();
-            // ejercicio3();
-            // ejercicio4();
-            // ejercicio5();
-            // ejercicio6();
-            // ejercicio7();
-            // ejercicio8();
-            // ejercicio9();
-            // Console.WriteLine("Esta cadena devuelve: " + ejercicio10());
+            ejercicio1();
+            ejercicio2();
+            ejercicio3();
+            ejercicio4();
+            ejercicio5();
+            ejercicio6();
+            ejercicio7();
+            ejercicio8();
+            ejercicio9();
+            Console.WriteLine("Esta cadena devuelve: " + ejercicio10());
         }
     }
 }
