@@ -8,7 +8,7 @@ namespace _1_Basicos_secuenciales
 {
     internal class Program
     {
-        static void ejercicio1()
+        static void Ejercicio1()
         {
             int num1 = ParseInt("Introduce un número entero: ");
             int num2 = ParseInt("Introduce otro número entero: ");
@@ -23,7 +23,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio2()
+        static void Ejercicio2()
         {
             float hamburguesa = 3.50f;
             float papas = 1.50f;
@@ -40,7 +40,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio3()
+        static void Ejercicio3()
         {
             int num1 = ParseInt("Introduce un número entero: ");
  
@@ -60,7 +60,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio4()
+        static void Ejercicio4()
         {
             Console.WriteLine("Cálculo del perímetro de un cuadrado.");
             float lado = ParseFloat("Introduce la longitud de un lado: ");
@@ -71,7 +71,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio5()
+        static void Ejercicio5()
         {
             Console.WriteLine("Este programa suma los dos primeros números enteros y multiplica los 2 siguientes.");
 
@@ -90,7 +90,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio6()
+        static void Ejercicio6()
         {
             Console.WriteLine("Este programa suma 4 números enteros y calcula su promedio.");
             int num1 = ParseInt("Introduce el primer número: ");
@@ -109,7 +109,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio7()
+        static void Ejercicio7()
         {
             float precio = ParseFloat("Introduce el precio del artículo: ");
             int unid = ParseInt("Introduce el número de unidades: ");
@@ -121,7 +121,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio8()
+        static void Ejercicio8()
         {
             Console.WriteLine("Cálculo de la nota final de Desarrollo de Interfaces");
             float parcial1 = ParseFloat("Introduce la primera calificación parcial: ");
@@ -138,7 +138,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static void ejercicio9()
+        static void Ejercicio9()
         {
             Console.WriteLine("Cálculo del porcentaje de participación de los socios.");
             float socio1 = ParseFloat("Introduce la cantidad que aporta el socio 1: ");
@@ -159,7 +159,7 @@ namespace _1_Basicos_secuenciales
             Console.WriteLine();
         }
 
-        static bool ejercicio10()
+        static bool Ejercicio10()
         {
             Console.Write("Introduce un string: ");
             string entrada = Console.ReadLine();
@@ -209,16 +209,16 @@ namespace _1_Basicos_secuenciales
 
         static void Main(string[] args)
         {
-            ejercicio1();
-            ejercicio2();
-            ejercicio3();
-            ejercicio4();
-            ejercicio5();
-            ejercicio6();
-            ejercicio7();
-            ejercicio8();
-            ejercicio9();
-            Console.WriteLine("Esta cadena devuelve: " + ejercicio10());
+            Ejercicio1();
+            Ejercicio2();
+            Ejercicio3();
+            Ejercicio4();
+            Ejercicio5();
+            Ejercicio6();
+            Ejercicio7();
+            Ejercicio8();
+            Ejercicio9();
+            Console.WriteLine("Esta cadena devuelve: " + Ejercicio10());
         }
     }
 }
